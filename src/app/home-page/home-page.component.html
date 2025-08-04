@@ -1,0 +1,42 @@
+<!-- top scroller -->
+<div
+  class="scroll-wrapper"
+  style="
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    padding: 8px;
+    background-color: black;
+    position: sticky;
+    top: 0px;
+    z-index: 1;
+  "
+>
+  <ng-container *ngFor="let item of buttonList">
+    <button
+      class="action-button pointer"
+      style="display: inline-block; margin-right: 8px"
+    >
+      {{ item }}
+    </button>
+  </ng-container>
+</div>
+
+<!-- main content -->
+<div class="video-grid">
+  <div class="youtube-card pointer" *ngFor="let video of videoList">
+    <div class="thumbnail">
+      <img [src]="video.thumbnail" alt="Video Thumbnail" />
+    </div>
+    <div class="video-info">
+      <div class="channel-icon">
+        <img [src]="video.channelIcon" alt="Channel Icon" />
+      </div>
+      <div class="meta">
+        <h4 class="video-title">{{ video.title }}</h4>
+        <p class="channel-name">{{ video.channelName }}</p>
+        <p class="video-stats">{{ video.views }} • {{ video.time }}</p>
+      </div>
+    </div>
+  </div>
+</div>

@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'youtube';
+
+  menuOpen:boolean = false;
+  toggleMenu(){
+    this.menuOpen = !this.menuOpen;
+  }
+
+  
 }

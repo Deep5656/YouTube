@@ -1,0 +1,36 @@
+<div
+  class="flex-row flex-wrap p-2"
+  style="
+    background-color: black;
+    color: white;
+    position: sticky;
+    top: 0px;
+    z-index: 1;
+  "
+>
+  <div class="w-24 flex-center" style="justify-content: flex-start">
+    <div class="flex-row flex-wrap" style="gap: 20px">
+      <p class="pointer" (click)="toggleMenu()">Menu</p>
+      <p class="pointer">YouTube</p>
+    </div>
+  </div>
+  <div class="w-56">
+    <div class="flex-row" style="gap: 10px">
+      <div class="youtube-search-bar">
+        <input type="text" placeholder="Search" class="search-input" />
+        <button class="search-button pointer">Search</button>
+      </div>
+      <button class="search-button pointer">Mike</button>
+    </div>
+  </div>
+  <div class="w-20 flex-row" style="gap: 10px; justify-content: flex-end">
+    <!-- Create Button -->
+    <button class="action-button pointer">Create</button>
+
+    <!-- Notification Bell -->
+    <button class="action-button pointer">Notification</button>
+
+    <!-- Profile/Avatar -->
+    <button class="profile-button pointer">Profile</button>
+  </div>
+</div>

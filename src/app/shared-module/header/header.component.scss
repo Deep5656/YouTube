@@ -1,0 +1,43 @@
+@import '../common-css/common-css.scss';
+@import '../common-css/partial/base.scss';
+@import '../common-css/partial/utility.scss';
+
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+.youtube-search-bar {
+  display: flex;
+  width: 100%;
+  max-width: 600px;
+  height: 36px;
+  border: 1px solid #333;
+  border-radius: 20px;
+  overflow: hidden;
+  background-color: #121212;
+
+  .search-input {
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 0 12px;
+    background-color: transparent;
+    color: white;
+    font-size: 14px;
+  }
+
+  .search-button {
+    background-color: #333;
+    border: none;
+    padding: 0 16px;
+    cursor: pointer;
+    color: white;
+    font-size: 16px;
+
+    i {
+      pointer-events: none;
+    }
+  }
+}
