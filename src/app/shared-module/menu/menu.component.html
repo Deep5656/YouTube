@@ -1,10 +1,21 @@
-  <!-- Sidebar -->
-    <div class="flex-col">
-      <ng-container *ngFor="let item of buttonList">
-        <button style="width: 100%; white-space: normal; word-wrap: break-word">
-          {{ item }}
-        </button>
-      </ng-container>
-    </div>
+<!-- Sidebar -->
+<div class="yt-sidebar-collapsed flex-col" *ngIf="!isMenuOpen">
+  <ng-container *ngFor="let item of buttonList">
+    <button class="yt-sidebar-btn pointer">
+      <i class="{{ item.icon }}"></i>
+      <span class="label">{{ item.label }}</span>
+    </button>
+  </ng-container>
+</div>
 
- 
+<div class="yt-sidebar-expanded flex-col" *ngIf="isMenuOpen">
+  <ng-container *ngFor="let item of buttonList">
+    <button class="yt-sidebar-btn pointer flex-row">
+      <i class="{{ item.icon }}"></i>
+      <span class="label">{{ item.label }}</span>
+    </button>
+  </ng-container>
+</div>
+
+
+
