@@ -1,18 +1,25 @@
-@import '../common-css/partial/base.scss';
-@import '../common-css/partial/utility.scss';
+@import "../common-css/partial/base.scss";
+@import "../common-css/partial/utility.scss";
 
-*{
-    font-family: Arial, sans-serif;
+* {
+  font-family: Arial, sans-serif;
 }
 
 ::-webkit-scrollbar {
-    display: none;
+  display: none;
 }
 
-.border{
-    border: 1px solid black;
+.border {
+  border: 1px solid white;
 }
-.pointer{
-    cursor: pointer;
+.dashed-border {
+  border: 1px dashed pink;
 }
-
+.pointer {
+  cursor: pointer;
+}
+.text-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -5,11 +5,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SharedModuleModule } from './shared-module/shared-module.module';
 import { HomePageComponent } from './home-page/home-page.component';
+import { ViewVideoComponent } from './view-video/view-video.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomePageComponent
+    HomePageComponent,
+    ViewVideoComponent
   ],
   imports: [
     BrowserModule,

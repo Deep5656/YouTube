@@ -23,17 +23,9 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
             "aot": false,
-            "assets": [
-              "src/favicon.ico",
-              "src/assets",
-              {
-                "glob": "**/*",
-                "input": "node_modules/@fortawesome/fontawesome-free/webfonts",
-                "output": "assets/webfonts"
-              }
-            ],
+            "assets": ["src/favicon.ico", "src/assets"],
             "styles": [
-              "node_modules/@fortawesome/fontawesome-free/css/all.min.css",
+              "src/assets/css/fontawesome/css/font-awesome.min.css",
               "src/styles.scss"
             ],
             "scripts": []
