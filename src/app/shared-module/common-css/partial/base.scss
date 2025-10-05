@@ -1,0 +1,49 @@
+// ====== Variables ======
+$spacing-step: 1%;
+$max-steps: 100;
+
+// ====== Flex Mixin ======
+@mixin flex($direction: row, $justify: flex-start, $align: stretch, $wrap: wrap) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+  flex-wrap: $wrap;
+}
+
+// ====== Flex Utilities ======
+.flex-row {
+  @include flex(row);
+}
+
+.flex-col {
+  @include flex(column);
+}
+
+.flex-center {
+  @include flex(row, center, center);
+}
+
+.flex-between {
+  @include flex(row, space-between, center);
+}
+
+.flex-nowrap {
+  flex-wrap: nowrap;
+}
+
+// ====== Width Utilities ======
+@for $i from 1 through $max-steps {
+  .w-#{$i * 1} {
+    width: #{$i * $spacing-step};
+  }
+}
+
+// ====== Responsive Utilities ======
+@media (max-width: 768px) {
+  .md-flex-col {
+    flex-direction: column !important;
+    display: flex; // include this if it's used independently
+  }
+
+}

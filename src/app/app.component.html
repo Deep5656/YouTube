@@ -1,0 +1,10 @@
+<app-header (menuToggle)="toggleMenu()"></app-header>
+
+<div class="flex-row">
+  <div [ngClass]="menuOpen ? 'w-15' : 'w-5'" style="height: 90vh; overflow-y: auto;">
+    <app-menu [isMenuOpen]="menuOpen"></app-menu>
+  </div>
+  <div [ngClass]="menuOpen ? 'w-85' : 'w-95'" style="height: 90vh;overflow-y: auto;">
+    <app-home-page></app-home-page>
+  </div>
+</div>
