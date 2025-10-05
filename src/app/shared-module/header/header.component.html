@@ -1,36 +1,51 @@
-<div
-  class="flex-row flex-wrap p-2"
-  style="
+<div class="flex-row flex-wrap p-2" style="
     background-color: black;
     color: white;
     position: sticky;
     top: 0px;
     z-index: 1;
-  "
->
+  ">
   <div class="w-24 flex-center" style="justify-content: flex-start">
     <div class="flex-row flex-wrap" style="gap: 20px">
+<<<<<<< HEAD
       <p class="pointer" (click)="clickMenu()">Menu</p>
       <p class="pointer">YouTube</p>
+=======
+      <p class="pointer" (click)="toggleMenu()"><fa-icon [icon]="faBars" size="2x"></fa-icon></p>
+      <div style="display: flex; flex-direction: row;justify-content: center;align-items: center;">
+        <fa-icon [icon]="faYoutube" size="2x" style="color: red;"></fa-icon>
+        <span>YouTube</span>
+      </div>
+>>>>>>> 4459a21a137b4e2aad2d7097e88e755b5ce338f8
     </div>
   </div>
   <div class="w-56">
     <div class="flex-row" style="gap: 10px">
       <div class="youtube-search-bar">
-        <input type="text" placeholder="Search" class="search-input" />
-        <button class="search-button pointer">Search</button>
+        <input #searchBox type="text" placeholder="Search" class="search-input" />
+
+        <!-- Clear button -->
+        <button *ngIf="searchBox.value" class="clear-btn" (click)="searchBox.value = ''">
+          ✕
+        </button>
+
+        <!-- Search icon -->
+        <button class="search-button pointer">
+          <fa-icon [icon]="faMagnifyingGlass" size="lg"></fa-icon>
+        </button>
       </div>
-      <button class="search-button pointer">Mike</button>
+
+      <button class="search-button pointer icon_style"> <fa-icon [icon]="faMicrophone" size="2x"></fa-icon></button>
     </div>
   </div>
   <div class="w-20 flex-row" style="gap: 10px; justify-content: flex-end">
     <!-- Create Button -->
-    <button class="action-button pointer">Create</button>
+    <button class="action-button pointer icon_style"> <fa-icon [icon]="faPlus" size="2x"></fa-icon></button>
 
     <!-- Notification Bell -->
-    <button class="action-button pointer">Notification</button>
+    <button class="action-button pointer icon_style"><fa-icon [icon]="faBell" size="2x"></fa-icon></button>
 
     <!-- Profile/Avatar -->
-    <button class="profile-button pointer">Profile</button>
+    <button class="profile-button pointer icon_style"><fa-icon [icon]="faUserCircle" size="2x"></fa-icon></button>
   </div>
 </div>

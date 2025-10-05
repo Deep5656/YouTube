@@ -1,12 +1,22 @@
+<<<<<<< HEAD
 import { Component, OnInit, OnDestroy } from "@angular/core";
 import { MenuService } from "../services/menu.service";
 import { Subscription } from "rxjs";
+=======
+import { CommonModule } from "@angular/common";
+import { Component, Input } from "@angular/core";
+import '@fortawesome/fontawesome-free/css/all.min.css';
+import { faHome, faFire, faPhotoVideo, faFilm, faClock, faThumbsUp } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeModule } from "@fortawesome/angular-fontawesome";
+>>>>>>> 4459a21a137b4e2aad2d7097e88e755b5ce338f8
 
 @Component({
   selector: "app-menu",
   templateUrl: "./menu.component.html",
+  imports: [CommonModule, FontAwesomeModule],
   styleUrls: ["./menu.component.scss"],
 })
+<<<<<<< HEAD
 export class MenuComponent implements OnInit, OnDestroy {
   isMenuOpen: boolean = false;
   private subscription: Subscription;
@@ -23,13 +33,20 @@ export class MenuComponent implements OnInit, OnDestroy {
     this.subscription.unsubscribe();
   }
 
+=======
+export class MenuComponent {
+
+  @Input() isMenuOpen: boolean = false;
+>>>>>>> 4459a21a137b4e2aad2d7097e88e755b5ce338f8
   buttonList = [
-    { icon: "fa-solid fa-house", label: "Home" },
-    { icon: "fa-solid fa-fire", label: "Trending" },
-    { icon: "fa-solid fa-photo-film", label: "Subscriptions" },
-    { icon: "fa-solid fa-film", label: "Library" },
-    { icon: "fa-solid fa-clock-rotate-left", label: "History" },
-    { icon: "fa-solid fa-clock", label: "Watch Later" },
-    { icon: "fa-solid fa-thumbs-up", label: "Liked Videos" },
+    { icon: faHome, label: "Home" },
+    { icon: faFire, label: "Trending" },
+    { icon: faPhotoVideo, label: "Subscriptions" },
+    { icon: faFilm, label: "Library" },
+    { icon: faClock, label: "History" },
+    { icon: faClock, label: "Watch Later" },
+    { icon: faThumbsUp, label: "Liked Videos" },
   ];
+
+
 }

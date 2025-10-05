@@ -1,21 +1,20 @@
 <!-- Sidebar -->
 <div class="yt-sidebar-collapsed flex-col" *ngIf="!isMenuOpen">
-  <ng-container *ngFor="let item of buttonList">
+  <ng-container *ngFor="let btn of buttonList">
     <button class="yt-sidebar-btn pointer">
-      <i class="{{ item.icon }}"></i>
-      <span class="label">{{ item.label }}</span>
+      <fa-icon [icon]="btn.icon" size="2x"></fa-icon>
+      <span [ngStyle]="{'font-size': btn.label === 'Subscriptions' ? '10px' : '12px'}">
+        {{ btn.label }}
+      </span>
     </button>
   </ng-container>
 </div>
+
 
 <div class="yt-sidebar-expanded flex-col" *ngIf="isMenuOpen">
-  <ng-container *ngFor="let item of buttonList">
+  <ng-container *ngFor="let btn of buttonList">
     <button class="yt-sidebar-btn pointer flex-row">
-      <i class="{{ item.icon }}"></i>
-      <span class="label">{{ item.label }}</span>
+      <fa-icon [icon]="btn.icon" size="2x"></fa-icon> {{ btn.label }}
     </button>
   </ng-container>
 </div>
-
-
-

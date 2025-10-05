@@ -1,6 +1,6 @@
-@import '../app/shared-module/common-css/common-css.scss';
-@import '../app/shared-module/common-css/partial/base.scss';
-@import '../app/shared-module/common-css/partial/utility.scss';
+@use '../app/shared-module/common-css/common-css' as common;
+@use '../app/shared-module/common-css/partial/base' as base;
+@use '../app/shared-module/common-css/partial/utility' as util;
 
 *{
     background-color: black;

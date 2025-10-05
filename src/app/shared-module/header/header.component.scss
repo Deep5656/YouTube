@@ -3,9 +3,9 @@
 @import '../common-css/partial/utility.scss';
 
 
-*{
-    margin: 0px;
-    padding: 0px;
+* {
+  margin: 0px;
+  padding: 0px;
 }
 
 .youtube-search-bar {
@@ -40,4 +40,26 @@
       pointer-events: none;
     }
   }
+
+  .clear-btn {
+    position: absolute;
+    right: 45px;
+    /* before search icon */
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    font-size: 18px;
+    color: #666;
+    line-height: 1;
+  }
+
+
+}
+
+.icon_style {
+  border-radius: 50%;
+  width: 35px;
+  height: 35spx;
+  border: none;
+  background-color: #f1f1f1;
 }

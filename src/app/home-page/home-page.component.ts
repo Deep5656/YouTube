@@ -1,13 +1,15 @@
+import { CommonModule } from "@angular/common";
 import { Component, Input } from "@angular/core";
 import { Router } from "@angular/router";
 
 @Component({
   selector: "app-home-page",
   templateUrl: "./home-page.component.html",
+  imports: [CommonModule],
   styleUrls: ["./home-page.component.scss"],
 })
 export class HomePageComponent {
-  constructor(private _router:Router){}
+  constructor(private _router: Router) {}
   buttonList: string[] = [
     "All",
     "News",

@@ -1,25 +1,24 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { SharedModuleModule } from './shared-module/shared-module.module';
+
+// Import standalone components
 import { HomePageComponent } from './home-page/home-page.component';
-import { ViewVideoComponent } from './view-video/view-video.component';
+import { HeaderComponent } from './shared-module/header/header.component';
+import { MenuComponent } from './shared-module/menu/menu.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    HomePageComponent,
-    ViewVideoComponent
-  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    SharedModuleModule,
+    AppComponent,       // Standalone component
+    HomePageComponent,  // Standalone component
+    HeaderComponent,    // Standalone component
+    MenuComponent       // Standalone component
   ],
-  exports:[HomePageComponent],
   providers: [],
-  bootstrap: [AppComponent]
+  // bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
