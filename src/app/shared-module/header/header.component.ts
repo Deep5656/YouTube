@@ -1,18 +1,17 @@
-import { Component, OnInit, Output,EventEmitter } from "@angular/core";
+import { Component, OnInit, Output, EventEmitter } from "@angular/core";
+import { MenuService } from "../services/menu.service";
 
 @Component({
-    selector:'app-header',
-    templateUrl:'./header.component.html',
-    styleUrls:['./header.component.scss']
+  selector: "app-header",
+  templateUrl: "./header.component.html",
+  styleUrls: ["./header.component.scss"],
 })
-export class HeaderComponent implements OnInit{
-    constructor(){}
-    ngOnInit(): void {
-    }
+export class HeaderComponent implements OnInit {
+  constructor(private _menuService: MenuService) {}
+  ngOnInit(): void {}
 
-    @Output() menuToggle = new EventEmitter<void>();
-    toggleMenu(){
-        this.menuToggle.emit();
-    }
-
+  clickMenu() {
+    const current = this._menuService.currentMenuState;
+    this._menuService.setMenuState(!current);
+  }
 }

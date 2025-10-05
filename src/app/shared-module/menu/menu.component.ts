@@ -1,12 +1,28 @@
-import { Component, Input } from "@angular/core";
+import { Component, OnInit, OnDestroy } from "@angular/core";
+import { MenuService } from "../services/menu.service";
+import { Subscription } from "rxjs";
 
 @Component({
   selector: "app-menu",
   templateUrl: "./menu.component.html",
   styleUrls: ["./menu.component.scss"],
 })
-export class MenuComponent {
-  @Input() isMenuOpen: boolean = false;
+export class MenuComponent implements OnInit, OnDestroy {
+  isMenuOpen: boolean = false;
+  private subscription: Subscription;
+
+  constructor(private _menuService: MenuService) {}
+
+  ngOnInit(): void {
+    this.subscription = this._menuService.menuState$.subscribe((isOpen) => {
+      this.isMenuOpen = isOpen;
+    });
+  }
+
+  ngOnDestroy(): void {
+    this.subscription.unsubscribe();
+  }
+
   buttonList = [
     { icon: "fa-solid fa-house", label: "Home" },
     { icon: "fa-solid fa-fire", label: "Trending" },
