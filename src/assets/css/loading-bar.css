@@ -1,0 +1,41 @@
+.only-spinner .ngx-bar {
+  pointer-events: all !important;
+  z-index: 99999 !important;
+  border: none !important;
+  margin: 0px !important;
+  padding: 0px !important;
+  width: 100% !important;
+  height: 100% !important;
+  top: 0px !important;
+  left: 0px !important;
+  cursor: wait !important;
+  position: fixed !important;
+  background-color: rgba(0, 0, 0, 0.1) !important;
+}
+
+.only-spinner .ngx-spinner {
+  display: block !important;
+  position: fixed !important;
+  z-index: 10002 !important;
+  top: 50% !important;
+  left: 50% !important;
+}
+
+.only-spinner .ngx-spinner .ngx-spinner-icon {
+  width: 50px !important;
+  height: 50px !important;
+  border: solid 2px transparent !important;
+  border-top-color: #29d !important;
+  border-left-color: #29d !important;
+  border-radius: 50% !important;
+  animation: loading-bar-spinner 400ms linear infinite !important;
+}
+
+@keyframes loading-bar-spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

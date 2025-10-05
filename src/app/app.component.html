@@ -5,6 +5,7 @@
     <app-menu [isMenuOpen]="menuOpen"></app-menu>
   </div>
   <div [ngClass]="menuOpen ? 'w-85' : 'w-95'" style="height: 90vh;overflow-y: auto;">
-    <app-home-page></app-home-page>
+    <!-- <app-home-page></app-home-page> -->
+    <router-outlet></router-outlet>
   </div>
 </div>

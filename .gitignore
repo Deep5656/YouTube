@@ -20,7 +20,11 @@ yarn-error.log
 .settings/
 *.sublime-workspace
 
+<<<<<<< HEAD
 # Visual Studio Code
+=======
+# IDE - VSCode
+>>>>>>> 3fa161965b95c2d86826d62a5f5a030b269abd7a
 .vscode/*
 !.vscode/settings.json
 !.vscode/tasks.json
@@ -28,6 +32,7 @@ yarn-error.log
 !.vscode/extensions.json
 .history/*
 
+<<<<<<< HEAD
 # Miscellaneous
 /.angular/cache
 .sass-cache/
@@ -39,5 +44,18 @@ testem.log
 __screenshots__/
 
 # System files
+=======
+# misc
+/.sass-cache
+/connect.lock
+/coverage
+/libpeerconnection.log
+npm-debug.log
+yarn-error.log
+testem.log
+/typings
+
+# System Files
+>>>>>>> 3fa161965b95c2d86826d62a5f5a030b269abd7a
 .DS_Store
 Thumbs.db

@@ -1,3 +1,8 @@
-import { Routes } from '@angular/router';
+// import { Routes } from "@angular/router";
+// import { HomePageComponent } from "./home-page/home-page.component";
+// import { ViewVideoComponent } from "./view-video/view-video.component";
 
-export const routes: Routes = [];
+// export const routes: Routes = [
+//   { path: '', component: HomePageComponent },
+//   { path: 'view-video', component: ViewVideoComponent }
+// ];

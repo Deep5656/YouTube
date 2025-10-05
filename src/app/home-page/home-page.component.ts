@@ -1,5 +1,6 @@
 import { CommonModule } from "@angular/common";
 import { Component, Input } from "@angular/core";
+import { Router } from "@angular/router";
 
 @Component({
   selector: "app-home-page",
@@ -8,6 +9,7 @@ import { Component, Input } from "@angular/core";
   styleUrls: ["./home-page.component.scss"],
 })
 export class HomePageComponent {
+  constructor(private _router: Router) {}
   buttonList: string[] = [
     "All",
     "News",
@@ -112,4 +114,9 @@ export class HomePageComponent {
       time: "1 week ago",
     },
   ];
+
+
+  viewVideo(){
+    this._router.navigate(['/view-video']);
+  }
 }

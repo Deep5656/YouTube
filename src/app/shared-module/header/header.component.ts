@@ -27,7 +27,7 @@ export class HeaderComponent implements OnInit {
     }
 
     @Output() menuToggle = new EventEmitter<void>();
-    toggleMenu() {
+    toggleMenu(){
         this.menuToggle.emit();
     }
 

@@ -97,7 +97,11 @@
       }
     }
   },
+<<<<<<< HEAD
   "cli": {
     "analytics": false
   }
+=======
+  "defaultProject": "youtube"
+>>>>>>> 3fa161965b95c2d86826d62a5f5a030b269abd7a
 }

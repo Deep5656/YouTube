@@ -24,7 +24,7 @@
 
 <!-- main content -->
 <div class="video-grid">
-  <div class="youtube-card pointer" *ngFor="let video of videoList">
+  <div class="youtube-card pointer" *ngFor="let video of videoList" (click)="viewVideo()">
     <div class="thumbnail">
       <img [src]="video.thumbnail" alt="Video Thumbnail" />
     </div>
